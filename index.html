@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic button — Сделать всё хорошо</title>
+  <meta name="description" content="Волшебная кнопка, которая делает всё хорошо">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <link href="css/_reset.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    #main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    #button {
+      width: 200px;
+      height: 200px;
+      margin: 40px auto;
+      cursor: pointer;
+    }
+    #progress {
+      margin: 20px 0;
+    }
+    #answer {
+      display: none;
+      margin-top: 30px;
+    }
+    #answer h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #0077cc;
+    }
+    #infoPanel {
+      margin-top: 30px;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+    p.ok {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+
+    /* 📱 адаптив */
+    @media (max-width: 480px) {
+      #button {
+        width: 150px;
+        height: 150px;
+        margin: 30px auto;
+      }
+      #answer h3 {
+        font-size: 1.2rem;
+      }
+      #infoPanel {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div id="button"></div>
+    <div id="progress">
+      <div id="bar">
+        <div id="line"></div>
+      </div>
+    </div>
+    <div id="answer">
+      <div>
+        <h3>Всё сделано хорошо</h3>
+        <p>Если всё хорошо не стало,<br>
+          попробуйте отрегулировать свои настройки восприятия реальности.</p>
+        <p class="ok"><span>ok</span></p>
+      </div>
+    </div>
+    <div id="infoPanel">
+      <p>Кнопка «Сделать всё хорошо» предназначена для регулярного улучшения жизни. Используйте её по мере необходимости.</p>
+    </div>
+  </div>
+</body>
+</html>
