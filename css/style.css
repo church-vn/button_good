@@ -292,17 +292,17 @@ img, div {
   #main {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important; /* вертикальное центрирование */
-    align-items: center !important;     /* горизонтальное центрирование */
-    height: 100vh !important;           /* контейнер на весь экран */
+    justify-content: center !important; 
+    align-items: center !important;    
+    height: 100vh !important;          
   }
 
   #button {
     width: 320px !important;
     height: 162px !important;
     background-size: cover !important;
-    position: relative !important;  /* сбрасываем absolute */
-    margin: 0 !important;           /* центрирование через flex */
+    position: relative !important; 
+    margin: 0 !important;          
     left: auto !important;
     top: auto !important;
   }
@@ -330,8 +330,8 @@ img, div {
 /* 📱 Планшеты (768px и меньше) */
 @media (max-width: 768px) {
   #answer {
-    width: 80% !important;      /* шире, почти на всю ширину экрана */
-    left: 10% !important;       /* центрирование */
+    width: 80% !important;     
+    left: 10% !important;      
     padding: 15px !important;
     font-size: 1rem !important;
   }
@@ -340,7 +340,7 @@ img, div {
 /* 📱 Смартфоны (480px и меньше) */
 @media (max-width: 480px) {
   #answer {
-    width: 90% !important;      /* почти весь экран */
+    width: 90% !important;      
     left: 5% !important;
     padding: 10px !important;
     font-size: 0.95rem !important;
@@ -350,7 +350,7 @@ img, div {
 /* 📱 Очень маленькие экраны (360px и меньше) */
 @media (max-width: 360px) {
   #answer {
-    width: 95% !important;      /* почти полностью по ширине экрана */
+    width: 95% !important;     
     left: 2.5% !important;
     padding: 8px !important;
     font-size: 0.9rem !important;

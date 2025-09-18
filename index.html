@@ -99,5 +99,13 @@ $(document).ready(function () {
       
 $(window).resize(function(){$("div#main img.background").width($(window).width()); $("div#main img.background").height($(window).height()); $('div#show').height($(window).height());});
   </script>
+  <script>
+if (window.innerWidth <= 480) {
+  let meta = document.querySelector('meta[name="viewport"]');
+  if (meta) {
+    meta.setAttribute('content', 'width=device-width, initial-scale=1.75');
+  }
+}
+</script>
 </body>
 </html>
