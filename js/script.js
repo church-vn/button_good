@@ -21,26 +21,17 @@ $(document).ready(function () {
 			$('div#answer').fadeOut(300);
 			$('div#answer').hide();
 			
-			//$('div#show').fadeIn(300); // here
 		
 		$("img.background").attr("src","images/background.jpg");
 		$("div#button").css({backgroundPosition: 'left top'});
 		
 			 });
-
-	//$('div#show div.close').click(function(){$('div#show').hide(); $("img.background").attr("src","images/background.jpg"); $("div#button").css({backgroundPosition: 'left top'})});	// here
-		
-		//});
 			
-			//$("div#main div#logotype").hover(function(){$(this).css("backgroundPosition","top left");},function(){$(this).css("backgroundPosition","top right");});
+			
 			$("div#main div#info").hover(function(){$("div#infoPanel").animate({opacity:1},100);},function(){$("div#infoPanel").animate({opacity:0},100);});
 			
-			//if ($("div#logotype a").attr("href")!="http://dekel.ru") {$("div#main").replaceWith("");}
 			
 			$("div#shareBlock a img").animate({opacity:0},0);
-			//$("div#shareBlock a").hover(function(){
-				//$(this).css("backgroundPosition","bottom left");},function(){$(this).css("backgroundPosition","top left");
-				//});
 				});
 			
 			
