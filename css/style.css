@@ -20,28 +20,56 @@ div#main div#button {
 	background:url(../images/button.png) top left no-repeat;
 	cursor:pointer;
 }
-div#main div#progress {
-	width:453px;
-	height:96px;
-	overflow:hidden;
-	position:absolute;
-	top:50%;
-	left:50%;
-	margin-left:-226px;
-	margin-top:-180px;
-	background:url(../images/progress.png) top left no-repeat;
+
+
+
+#progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  height: 30px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+  display: none;
 }
-div#main div#progress div#bar {
-	position:relative;
+
+#progress div#bar {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-div#main div#progress div#bar div#line {
-	position:absolute;
-	top:54px;
-	left:53px;
-	width:0px;
-	height:10px;
-	background:#2BCF18;
+
+#progress div#line {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #2BCF18, #00FFAA);
+  border-radius: 20px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, sans-serif;
+  transition: width 0.3s ease-in-out;
 }
+
+/* Адаптив */
+@media (max-width: 480px) {
+  #progress { height: 25px; }
+  #progress div#line { line-height: 25px; font-size: 0.9rem; }
+}
+
+@media (max-width: 360px) {
+  #progress { height: 20px; }
+  #progress div#line { line-height: 20px; font-size: 0.8rem; }
+}
+
+
+
 div#main div#answer {
 	width:50%;
 	min-height:170px;
@@ -259,42 +287,78 @@ img, div {
         font-size: 0.95rem;
       }
     }
+/* 📱 Планшеты (768px и меньше) */
+@media (max-width: 768px) {
+  #main {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; /* вертикальное центрирование */
+    align-items: center !important;     /* горизонтальное центрирование */
+    height: 100vh !important;           /* контейнер на весь экран */
+  }
 
-
-
-/* Адаптив для мобильных устройств */
-@media (max-width: 480px) {
-    #button {
-        line-height: 0 !important;
-        font-family: Arial, sans-serif !important;
-        text-align: center !important;
-        color: #333 !important;
-        padding: 0 !important;
-        border: 0 !important;
-        outline: 0 !important;
-        font-size: 100% !important;
-        vertical-align: baseline !important;
-        margin: 30px auto !important;
-        width: 363px !important;
-        height: 190px !important;
-        overflow: hidden !important;
-        position: absolute !important;
-        top: 50% !important;
-        left: 65% !important;
-        margin-top: -115px !important;
-        margin-left: -226px !important;
-        background: url(../images/button.png) top left no-repeat !important;
-        cursor: pointer !important;
-        background-size: cover !important;
-        background-position: left top !important;
-        opacity: 1 !important;
-    }
-
-    #answer h3 {
-        font-size: 1.2rem !important;
-    }
-
-    #infoPanel {
-        font-size: 0.95rem !important;
-    }
+  #button {
+    width: 320px !important;
+    height: 162px !important;
+    background-size: cover !important;
+    position: relative !important;  /* сбрасываем absolute */
+    margin: 0 !important;           /* центрирование через flex */
+    left: auto !important;
+    top: auto !important;
+  }
 }
+
+/* 📱 Смартфоны (480px и меньше) */
+@media (max-width: 480px) {
+  #button {
+    width: 250px !important;
+    height: 127px !important;
+  }
+}
+
+/* 📱 Очень маленькие экраны (360px и меньше) */
+@media (max-width: 360px) {
+  #button {
+    width: 200px !important;
+    height: 101px !important;
+  }
+}
+
+
+
+
+/* 📱 Планшеты (768px и меньше) */
+@media (max-width: 768px) {
+  #answer {
+    width: 80% !important;      /* шире, почти на всю ширину экрана */
+    left: 10% !important;       /* центрирование */
+    padding: 15px !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* 📱 Смартфоны (480px и меньше) */
+@media (max-width: 480px) {
+  #answer {
+    width: 90% !important;      /* почти весь экран */
+    left: 5% !important;
+    padding: 10px !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+/* 📱 Очень маленькие экраны (360px и меньше) */
+@media (max-width: 360px) {
+  #answer {
+    width: 95% !important;      /* почти полностью по ширине экрана */
+    left: 2.5% !important;
+    padding: 8px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+
+
+
+
+
